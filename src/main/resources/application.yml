@@ -1,0 +1,28 @@
+spring:
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        password: 123456
+        url: jdbc:mysql://localhost:3306/ssm?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+        username: root
+mybatis:
+    #扫描并装在映射文件
+    mapper-locations: /mapper/*.xml
+    #为对象提供别名
+    type-aliases-package: com.javakc.springbootssm.*.entity
+    configuration:
+        #向控制台输出日志
+        log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+server:
+    port: 8443
+#    ssl:
+#        key-store: classpath:javakc.keystore
+#        key-alias: javakc
+#        key-store-password: 123456
+#        key-store-type: JKS
+
+#
+#server.port: 8443
+#server.ssl.key-store: classpath:keystore.p12
+#server.ssl.key-store-password: mypassword
+#server.ssl.keyStoreType: PKCS12
+#server.ssl.keyAlias: tomcat12345
